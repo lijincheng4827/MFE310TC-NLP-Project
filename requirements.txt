@@ -1,0 +1,13 @@
+torch>=2.6
+transformers>=4.48,<5
+datasets>=3.3
+huggingface-hub>=0.28
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+PyYAML>=6
+tqdm>=4.66
+safetensors>=0.5
+pytest>=8

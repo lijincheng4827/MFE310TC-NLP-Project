@@ -1,0 +1,11 @@
+model_name: distilbert-base-uncased
+dataset_name: Yelp/yelp_review_full
+seeds: [42, 123, 2026]
+data_seed: 42
+sample_size: 30000
+max_length: 256
+batch_size: 16
+epochs: 5
+learning_rate: 0.00002
+weight_decay: 0.01
+patience: 2
