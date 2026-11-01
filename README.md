@@ -4,9 +4,17 @@ This project was developed for MFE310TC – Natural Language Processing and Deep
 
 ## Experiment setup
 
-The experiments were conducted on Google Colab Pro with an NVIDIA A100-SXM4-80GB GPU, Ubuntu Linux, Python 3.13 and CUDA 13.0. Each model is trained with seeds 42, 123 and 2026 so that its average performance and variation across runs can be compared, while each neural model is trained for up to five epochs and stops early if validation Macro-F1 does not improve for two consecutive epochs.
+The experiments were conducted on Google Colab Pro using an NVIDIA A100-SXM4-80GB GPU (Ubuntu Linux, Python 3.13, CUDA 13.0). To reproduce the complete training and evaluation pipeline, run:
+`python -m pip install -r requirements.txt
+bash run_all.sh`.
 
-The experiment saves metric tables and five 300 DPI figures in `results/`, records training details in `logs/experiment.log`, and stores model checkpoints in `checkpoints/`. It also creates `MFE310TC_Submission_Package.zip` containing the code and experiment outputs, with the checkpoints left out of the archive.
+The complete experiment trains three models for seeds 42, 123 and 2026,
+writes tables and five 300 DPI figures to `results/` and training details go to `logs/experiment.log`.
+Run `python -m src.demo` to repeat the six-review demo after training.
+
+The default experiment uses 30,000 reviews and up to five epochs for each
+neural model and seed. Early stopping uses two epochs without validation
+improvement. All models use the same `sample_size` setting.
 
 ## Data
 
